@@ -1,0 +1,221 @@
+.main {
+  font-family: "Montserrat";
+  font-weight: 600;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../../images/plataFon.jpg);
+  display: flex;
+}
+
+.bg {
+  background-color: rgb(36, 36, 36);
+  margin: 20px 20px 100px 20px;
+  padding: 30px 10px 30px 30px;
+  width: 100vw;
+}
+.title {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.titleFalse {
+  color: rgb(160, 0, 0);
+  font-size: 30px;
+  text-align: center;
+}
+.basket_start {
+  margin-top: 5rem;
+  width: -webkit-calc(100% - 31.25rem);
+  width: calc(100% - 31.25rem);
+  max-width: 55rem;
+  margin-bottom: 4rem;
+  z-index: 2;
+}
+.basket_title {
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+.basket_itemBox {
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
+.basket_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #56617c;
+  padding: 1rem 0;
+  width: 100%;
+  position: relative;
+}
+.basket_itemCard {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 18.5rem);
+}
+.basket_ItemImage {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+}
+.basket_itemName {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff;
+  margin-left: 2.5rem;
+}
+.itemPrice {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+  color: #a50d0d;
+}
+.costImage {
+  width: 25px;
+  height: 25px;
+  }
+.globalPrice {
+  color: white;
+  display: flex;
+}
+.buttonBuy {
+  background-color: #a50d0d;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: "Montserrat";
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+.buttonBuy:hover {
+  background-color: #56617c;
+}
+.buttonDelete {
+  width: 50px;
+  height: 35px;
+
+  background-color: #a50d0d;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+.buttonDelete:hover {
+  background-color: #56617c;
+}
+.loader {
+  --height-of-loader: 4px;
+  --loader-color: #e20000;
+  width: 60%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.totalCost {
+  color: rgb(131, 0, 0);
+  margin-left: 30px;
+}
+.basketOrder {
+  outline: 0;
+  box-sizing: border-box;
+  margin-left: 50px;
+  padding: 0;
+}
+.basketTitle {
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+.inputTextData {
+  margin-top: 25px;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.inputTextName {
+  width: 440px;
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.5;
+  color: #8490a4;
+  margin-bottom: 0.25rem;
+}
+.inputText {
+  font-family: "PF DinDisplay Pro";
+  width: 100%;
+  background: #151a22;
+  border: 1px solid #3f4c5f;
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 2.5rem;
+  color: #8490a4;
+  letter-spacing: 0.03em;
+  padding: 0 2rem 0 0.375rem;
+}
+.messageText {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 1.5625rem);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #8490a4;
+  font-family: "PF DinDisplay Pro";
+}
+.buttonBuy3 {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff0000, #ff0400, #ff0000, #ff0000);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.buttonBuy3:hover {
+  background: red;
+}

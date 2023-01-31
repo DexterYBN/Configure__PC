@@ -1,0 +1,50 @@
+.main {
+    font-family: "Montserrat";
+    font-weight: 600;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url(../../images/plataFon.jpg);
+    display: flex;
+}
+
+.bg {
+    background-color: rgb(36, 36, 36);
+    margin: 20px 20px 100px 20px;
+    padding: 30px 10px 30px 30px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.loader {
+    --height-of-loader: 4px;
+    --loader-color: #e20000;
+    width: 60%;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+   }
+   
+   .loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+   }
+   
+   @keyframes moving {
+    50% {
+     width: 100%;
+    }
+   
+    100% {
+     width: 0;
+     right: 0;
+     left: unset;
+    }
+   }

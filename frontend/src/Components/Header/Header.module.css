@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  width: 100%;
+  padding: 0.3% 0% 0.3% 0%;
+  background-color: rgb(36, 36, 36);
+}
+.logoBlock {
+  display: flex;
+  margin-left: 1%;
+}
+.logo {
+  width: 100px;
+  margin-left: 1%;
+  margin-top: 0.5%;
+}
+.logoText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Montserrat";
+  font-size: 50px;
+  color: white;
+}
+.navigationBlock {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.navigationButton {
+  margin-left: 5%;
+  color: white;
+  height: 35px;
+
+  transition: 0.5s;
+
+  font-size: 25px;
+  font-family: "Montserrat";
+}
+
+.navigationButton:hover {
+  color: red;
+  transition: 0.5s;
+
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+.loginBlock {
+  display: flex;
+  margin-left: 25%;
+  align-items: center;
+}
+
+.loginButton {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-color: rgb(36, 36, 36);
+  position: relative;
+  padding: 15px 30px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff0000, #ff0400, #ff0000, #ff0000);
+  border-image-slice: 1;
+  margin: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.loginButton:hover {
+  background: red;
+}
+
+.cart {
+  height: 30px;
+  width: 30px;
+  background-image: url("../../images/icons/cart_white.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+.cart:hover {
+  background-image: url("../../images/icons/cart_red.png");
+}

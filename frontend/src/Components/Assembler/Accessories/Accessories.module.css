@@ -1,0 +1,86 @@
+.main {
+    margin: 0px 0px 0px 20px;
+    width: 600px;
+    color: gray;
+    overflow: auto;
+    max-height: 530px;
+
+}
+
+.main::-webkit-scrollbar {
+    width: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: rgb(69, 69, 69);
+    border-radius: 20px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: rgb(85, 0, 0);
+    border-radius: 20px;
+}
+
+.accessory {
+    font-size: 26px;
+    color: gray;
+    margin: 0px 0px 20px 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.accessory:hover {
+    color: rgb(125, 48, 48);
+}
+
+.accessorySelected {
+    cursor: pointer;
+    font-size: 26px;
+    color: rgb(131, 0, 0);
+    margin: 0px 0px 20px 20px;
+}
+
+.accessoryBorder {
+    margin: 8px 20px 0px 0px;
+    border-bottom: 3px dashed rgb(131, 0, 0);
+}
+
+.radioInput {
+    margin: 0px 20px 0px 0px;
+
+}
+
+.loader {
+    --height-of-loader: 4px;
+    --loader-color: #e20000;
+    width: 100%;
+    height: var(--height-of-loader);
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.loader::before {
+    content: "";
+    position: absolute;
+    background: var(--loader-color);
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: moving 1s ease-in-out infinite;
+    ;
+}
+
+@keyframes moving {
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+        right: 0;
+        left: unset;
+    }
+}

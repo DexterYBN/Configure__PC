@@ -1,0 +1,35 @@
+.container {
+  width: 30%;
+  /* border: 1px solid brown; */
+  height: 100px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+.costBox p {
+  color: rgb(174, 0, 0);
+}
+
+.cartBox button {
+  border: none;
+  width: 100px;
+  height: 40px;
+  background-color: red;
+  border-radius: 5px;
+  color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 100px;
+}
+button:hover {
+  background-color: rgb(127, 120, 120);
+
+}
+button:active {
+  background-color: rgb(154, 144, 144);
+
+}

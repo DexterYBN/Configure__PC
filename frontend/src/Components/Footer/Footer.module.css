@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+footer {
+  background-color: rgb(36, 36, 36);
+  font-family: "Montserrat";
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+}
+
+.mainContainer {
+  width: 92%;
+}
+
+.container {
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrapper_1 {
+  width: 20%;
+  height: 90%;
+  color: rgb(172, 172, 172);
+}
+
+.wrapper_1 h5 a {
+  color: rgb(174, 0, 0);
+  font-size: 16px;
+  margin-bottom: 5%;
+  transition: 0.3s;
+}
+
+.wrapper_1 h5 a:hover {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 5%;
+  transition: 0.3s;
+}
+
+.wrapper_1 h2 {
+  color: rgb(174, 0, 0);
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+
+.wrapper_1 h2:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.wrapper_1 .h4 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.wrapper_2 {
+  width: 79%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.company .h4 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+.company p {
+  color: rgb(174, 0, 0);
+  font-size: 16px;
+  margin-bottom: 5%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.company p:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.buyers .h4 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 3px;
+  width: 100%;
+  margin-bottom: 40px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.buyers p {
+  color: rgb(174, 0, 0);
+  font-size: 16px;
+  margin-bottom: 5%;
+  cursor: pointer;
+}
+
+.buyers p:hover {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.wrapper_3 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  width: 40%;
+  text-align: start;
+  display: flex;
+  gap: 5%;
+}
+
+.copyright {
+  width: 25%;
+  color: #ccc;
+  text-align: end;
+  font-size: 14px;
+}

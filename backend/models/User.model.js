@@ -9,6 +9,12 @@ const userSchema = mongoose.Schema({
     type: String,
     require: true,
   },
+  cart: [
+    {
+      ref: "assemblies",
+      type: mongoose.SchemaTypes.ObjectId,
+    },
+  ],
 });
 
 const User = mongoose.model("User", userSchema);

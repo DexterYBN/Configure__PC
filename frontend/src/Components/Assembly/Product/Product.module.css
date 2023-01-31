@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+.productContainer {
+  border: 1px solid #000;
+  background-color: #1c232e;
+  padding: 0 1.5rem 0.8125rem;
+  margin-left: 1%;
+  margin-top: 45px;
+  width: 277px;
+  box-sizing: content-box;
+}
+
+.poster {
+  display: flex;
+  margin-top: -2.125rem;
+  margin-bottom: -0.8125rem;
+  margin-left: 9%;
+  width: 220px;
+  height: 220px;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 1px;
+  margin-top: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: rgb(206, 15, 15);
+}
+
+.price {
+  margin-top: 20px;
+  font-size: 20px;
+
+  color: rgb(179, 12, 12);
+}
+
+.buyButton {
+  border: none;
+  width: 93px;
+  height: 100%;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buyButton:hover {
+  background-color: rgb(127, 120, 120);
+}
+
+.buyButton:active {
+  background-color: rgb(154, 144, 144);
+}
+
+.buttonMore {
+  border: none;
+  width: 99px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-family: "Montserrat";
+  background-color: rgb(58, 57, 57);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.buttonMore:hover {
+  background-color: rgb(69, 68, 68);
+}
+.buttonMore:active {
+  background-color: rgb(69, 68, 68);
+}
+.description {
+  width: 272px;
+  height: 80px;
+  font-family: "PF DinDisplay Pro";
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: #8490a4;
+  margin-bottom: 1rem;
+  margin-top: 5%;
+}
+
+.line {
+  border-bottom: 1px solid #f00;
+  /* Параметры линии */
+}
+
+.acsTitle {
+  font-family: "Montserrat";
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: #8490a4;
+  margin-bottom: 1px;
+
+  margin-top: 4%;
+}
+
+.acsName {
+  font-size: 16px;
+  line-height: 1;
+  color: #c3cee1;
+  width: 100%;
+
+  margin-top: 2%;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 3%;
+  margin-left: 1%;
+}
+
+.posterAcs {
+  width: 35px;
+  height: 35px;
+}
+
+.acsBlockN {
+  display: flex;
+}
+
+.loader {
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 60%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.main {
+  font-family: "Montserrat";
+  font-weight: 600;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../../../images/plataFon.jpg);
+  display: flex;
+}
+
+.bg {
+  background-color: rgb(36, 36, 36);
+  margin: 20px 20px 100px 20px;
+  padding: 30px 10px 30px 30px;
+  width: 97vw;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.detalic {
+  display: flex;
+}
+
+.detalicTitle {
+  width: 50%;
+  align-items: flex-start;
+}
+
+.matrix {
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #c50e0e;
+  margin-bottom: 0.5rem;
+}
+
+.detalicName {
+  font-weight: normal;
+  font-size: 4rem;
+  line-height: 1.12;
+  margin-bottom: 1rem;
+
+  font-weight: bold;
+  font-family: "Montserrat";
+  color: white;
+}
+
+.detalicDescription {
+  font-family: "PF DinDisplay Pro";
+  font-size: 1.5rem;
+  line-height: 1.33;
+  color: #8490a4;
+  max-width: 33.4375rem;
+  margin: 0 0 4rem;
+}
+
+.buttonSection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buyButton2 {
+  border: none;
+  min-width: 11.25rem;
+  height: 56px;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+}
+
+.buyButton2:hover {
+  background-color: rgb(127, 120, 120);
+}
+
+.priceBox {
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+}
+
+.detalicPrice {
+  display: flex;
+  align-items: flex-start;
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  font-family: "Montserrat";
+  letter-spacing: 0.03em;
+  color: #e20000;
+}
+
+.detalicPriceImage {
+  width: 30px;
+  height: 30px;
+  margin-top: 13.5px;
+  margin-left: 10px;
+}
+
+.detalicPoster {
+  width: 600px;
+  height: 600px;
+}
+
+.detalicTit {
+  font-weight: normal;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.17;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  margin-top: 24%;
+}
+
+.detalicWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.detailBLOCK {
+  display: block;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  width: 140%;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #56617c;
+  font-family: "PF DinDisplay Pro";
+}
+
+.listCategory {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #8490a4;
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1rem;
+}
+
+.catImage {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 0;
+  margin-right: 5rem;
+}
+
+.detailName {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #c3cee1;
+  margin-top: 5px;
+}
+
+.detailBox {
+  display: flex;
+}
+
+.features {
+  list-style: none;
+  padding: 1.75rem 2.5rem;
+  background: #1c232e;
+  width: 27.5rem;
+  height: 490px;
+  margin: 240px 0px 200px 450px;
+}
+
+.featuresLi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.featuresImgBox {
+  font-size: 0;
+  width: 5rem;
+  margin-right: 1.5rem;
+}
+
+.compass {
+  width: 80px;
+  height: 80px;
+}
+
+.featuresText {
+  font-size: 1.5rem;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #8490a4;
+  padding-right: 0.875rem;
+}
+
+.buyButtonS {
+  border: none;
+  width: 93px;
+  height: 100%;
+  background-color: rgb(127, 120, 120);
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  height: 40px;
+  display: flex;
+}
+
+.buyButton2S {
+  border: none;
+  min-width: 11.25rem;
+  height: 56px;
+  background-color: rgb(127, 120, 120);
+  border-radius: 5px;
+  color: white;
+
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Montserrat";
+}

@@ -10,9 +10,9 @@ module.exports.categoriesController = {
     }
   },
   createCategory: async (req, res) => {
-    const { name } = req.body;
+    const { name, image } = req.body;
     try {
-      const newCategory = await Category.create({ name });
+      const newCategory = await Category.create({ name, image });
       return res.status(201).json(newCategory);
     } catch (error) {
       return res.status(400).json({ error: error.message });

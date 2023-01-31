@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+.main {
+  display: flex;
+
+}
+
+.categoriesContainer {
+  max-width: 400px;
+  max-height: 530px;
+  overflow: auto;
+  padding-right: 25px;
+}
+
+.categoriesContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+.categoriesContainer::-webkit-scrollbar-track {
+  background: rgb(69, 69, 69);
+  border-radius: 20px;
+}
+
+.categoriesContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 0, 0);
+  border-radius: 20px;
+}
+
+.categoryItem {
+  border-radius: 3px;
+  border-bottom: 2.5px solid rgb(131, 0, 0);
+  font-size: 20px;
+  display: flex;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+
+.image {
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  filter: hue-rotate(1turn)
+}
+
+.itemName {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: 0.5s
+}
+.itemNameRed {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(131, 0, 0);
+  font-size: 18px;
+  margin-left: 10px;
+  transition: 0.3s
+}
+.itemNameRedSelected {
+  font-size: small;
+}
+.itemName:hover {
+  color: rgb(125, 48, 48);
+
+}
+
+.loader {
+  --height-of-loader: 4px;
+  --loader-color: #e20000;
+  width: 60%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+ }
+ 
+ .loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+ }
+ 
+ @keyframes moving {
+  50% {
+   width: 100%;
+  }
+ 
+  100% {
+   width: 0;
+   right: 0;
+   left: unset;
+  }
+ }
