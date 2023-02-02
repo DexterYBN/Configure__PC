@@ -25,9 +25,12 @@ const Assembler = () => {
       <Main />
       <div className={styles.main}>
         <div className={styles.bg}>
-          <Categories id={configure} />
-          <Accessories key={'key'} id={configure} />
-          <Detail id={configure} />
+          <div className={styles.flex}>
+            <Categories id={configure} />
+            <Accessories key={'key'} id={configure} />
+            <Detail id={configure} />
+          </div>
+
           <Total id={configure} />
         </div>
       </div></>

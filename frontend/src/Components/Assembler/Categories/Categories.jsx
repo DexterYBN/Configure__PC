@@ -35,7 +35,7 @@ const Categories = () => {
           //   || (accessory._id === graphics) || (accessory._id === ram)
           //   || (accessory._id === hdd) || (accessory._id === ssd)
           //   || (accessory._id === compCase) || (accessory._id === power)
-          //   || (accessory._id === sound) || (accessory._id === os)
+          //   || (accessory._id === soun d) || (accessory._id === os)
           //   || (accessory._id === mouse) || (accessory._id === keyboard)
           //   || (accessory._id === monitor) || (accessory._id === headset)) {
           //   return (

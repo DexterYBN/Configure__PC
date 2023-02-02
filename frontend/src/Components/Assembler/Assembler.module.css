@@ -11,6 +11,7 @@
     margin: 20px 20px 100px 20px;
     padding: 30px 10px 30px 30px;
     width: 100vw;
+}
+.flex {
     display: flex;
-    flex-wrap: wrap;
 }

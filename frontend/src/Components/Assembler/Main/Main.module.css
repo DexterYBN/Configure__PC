@@ -10,6 +10,7 @@ body {
   transition: opacity 0.2s ease, visibility 0.2s ease;
   background: url("../../../images/background.png") no-repeat,
     linear-gradient(#a00707be, #000000);
+  background-size: contain;
 }
 .title {
   color: white;

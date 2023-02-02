@@ -12,7 +12,7 @@ const Detail = () => {
     const handleAddToConfigure = ({ value, key, cost }) => {
         dispatch(editConfigure({ key, value, cost, id: configure }))
     }
-    
+
     return (
         <>
             {accessories.map((accessory) => {
@@ -26,9 +26,7 @@ const Detail = () => {
                                     <button className={styles.btn} onClick={() => handleAddToConfigure({ value: selectedAccessory, key: accessory.category.key, cost: accessory.cost })}>Выбрать</button>
                                 </div>
                             </div>
-
                             <div className={styles.description}> {accessory.description}</div>
-
                         </div>
                     )
                 }

@@ -15,7 +15,7 @@
 .title {
   color: white;
   font-size: 30px;
-  text-align: center;
+  padding-left: 20%;
 }
 .titleFalse {
   color: rgb(160, 0, 0);
@@ -149,7 +149,7 @@
 .basketOrder {
   outline: 0;
   box-sizing: border-box;
-  margin-left: 50px;
+  margin-left: 400px;
   padding: 0;
 }
 .basketTitle {
