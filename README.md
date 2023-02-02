@@ -78,7 +78,7 @@ npm i
 ```
 
 ```javascript
-npm nodemon
+npx nodemon
 ```
 
 <br>
