@@ -1,20 +1,24 @@
-import React, { useEffect } from "react";
-import styles from "./Assembly.module.css";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Product from "./Product/Product";
 import { fetchAcs } from "../../features/accessoriesSlice";
 import { fetchCategories } from "../../features/categoriesSlice";
 import { fetchCart } from "../../features/usersSlice";
+import styles from "./Assembly.module.css";
+import Product from "./Product/Product";
 
 const Assembly = () => {
+
   const assembles = useSelector((state) => state.assembles.assembles);
   const loading = useSelector((state) => state.assembles.loading);
+
   const dispatch = useDispatch();
-  useEffect(() => {
+
+  React.useEffect(() => {
     dispatch(fetchAcs());
-    dispatch(fetchCart({userId: localStorage.getItem('id') }))
+    dispatch(fetchCart({ userId: localStorage.getItem("id") }));
     dispatch(fetchCategories());
   }, [dispatch]);
+  
   return (
     <div className={styles.main}>
       <div className={styles.bg}>
@@ -23,7 +27,6 @@ const Assembly = () => {
         ) : (
           assembles.map((item) => {
             return (
-              
               <Product
                 key={item._id}
                 id={item._id}

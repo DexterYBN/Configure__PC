@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 const initialState = {
   loading: false,
   error: null,
   accessories: [],
   acs: [],
-  accessory: '63b0179bbaabfe23ec67d477'
+  accessory: "63b0179bbaabfe23ec67d477",
 };
-
 
 export const fetchAccesories = createAsyncThunk(
   "get/accessories",
@@ -23,6 +23,7 @@ export const fetchAccesories = createAsyncThunk(
     }
   }
 );
+
 export const fetchAcs = createAsyncThunk(
   "get/ACCESSORIES",
   async (data, thunkAPI) => {
@@ -38,9 +39,13 @@ export const fetchAcs = createAsyncThunk(
     }
   }
 );
-export const selectAccessory = createAsyncThunk('select/accessory', ({ id }, _) => {
-  return id
-})
+
+export const selectAccessory = createAsyncThunk(
+  "select/accessory",
+  ({ id }, _) => {
+    return id;
+  }
+);
 
 export const accesoriesSlice = createSlice({
   name: "accessories",
@@ -48,14 +53,16 @@ export const accesoriesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+
       .addCase(selectAccessory.fulfilled, (state, action) => {
         state.accessory = action.payload;
       })
+
       .addCase(fetchAccesories.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
-      .addCase(fetchAccesories.pending, (state, action) => {
+      .addCase(fetchAccesories.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
@@ -64,11 +71,12 @@ export const accesoriesSlice = createSlice({
         state.error = null;
         state.accessories = action.payload;
       })
+
       .addCase(fetchAcs.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
-      .addCase(fetchAcs.pending, (state, action) => {
+      .addCase(fetchAcs.pending, (state) => {
         state.loading = true;
         state.error = null;
       })
@@ -79,6 +87,5 @@ export const accesoriesSlice = createSlice({
       });
   },
 });
-
 
 export default accesoriesSlice.reducer;

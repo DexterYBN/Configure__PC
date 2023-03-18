@@ -5,7 +5,7 @@ import History from "./History";
 const AboutUs = () => {
   return (
     <div className={styles.about}>
-      <History/>
+      <History />
     </div>
   );
 };

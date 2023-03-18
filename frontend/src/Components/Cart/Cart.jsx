@@ -1,18 +1,22 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getConfigures } from "../../features/configuresSlice";
 import { fetchCart } from "../../features/usersSlice";
-import styles from "./Cart.module.css";
 import CartItems from "./CartItems";
+import styles from "./Cart.module.css";
+
 const Cart = () => {
   const cart = useSelector((state) => state.users.cart);
   const assembles = useSelector((state) => state.assembles.assembles);
   const configures = useSelector((state) => state.configures.configures);
+  const loading = useSelector((state) => state.users.loading);
+
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(getConfigures());
   }, [dispatch]);
+
   let sum = 0;
   cart.forEach((cartItem) => {
     assembles.forEach((element) => {
@@ -20,6 +24,7 @@ const Cart = () => {
         sum = sum + element.cost;
       }
     });
+
     configures.forEach((configure) => {
       if (configure._id === cartItem) {
         sum = sum + configure.cost;
@@ -27,10 +32,10 @@ const Cart = () => {
     });
   });
 
-  const loading = useSelector((state) => state.users.loading);
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchCart({ userId: localStorage.getItem("id") }));
   }, [dispatch]);
+
   return (
     <div className={styles.main}>
       <div className={styles.bg}>

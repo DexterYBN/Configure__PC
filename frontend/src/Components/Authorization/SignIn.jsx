@@ -1,19 +1,21 @@
 import React from "react";
-import { useState } from "react";
-import styles from "./Authorization.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { authSignIn, authSignUp } from "../../features/usersSlice";
-import { useEffect } from "react";
+import styles from "./Authorization.module.css";
 
 const SignIn = () => {
-  const [style, setStyle] = useState(styles.formBox);
-  const [bgStyle, setBgStyle] = useState(styles.loginBlock);
+  const [style, setStyle] = React.useState(styles.formBox);
+  const [bgStyle, setBgStyle] = React.useState(styles.loginBlock);
+
   const error = useSelector((state) => state.users.error);
+
   const token = localStorage.getItem("token");
+
   const successfully = useSelector((state) => state.users.successfully);
   const loading = useSelector((state) => state.users.loading);
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
+
+  const [login, setLogin] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
   const handleSetLogin = (e) => {
     setLogin(e.target.value);
@@ -42,7 +44,7 @@ const SignIn = () => {
     await dispatch(authSignUp({ login, password }));
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (successfully) {
       setStyle(styles.formBox);
     }
@@ -105,12 +107,11 @@ const SignIn = () => {
               </button>
             </div>
             <div className={styles.formForgot}>
-              <a onClick={handleMusic} href="#">
+              <a onClick={handleMusic} href="/">
                 Забыли пароль?
               </a>
             </div>
             <div className={styles.error}>
-              {" "}
               {error ? (
                 error
               ) : (

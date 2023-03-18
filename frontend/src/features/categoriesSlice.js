@@ -4,8 +4,8 @@ const initialState = {
   loading: false,
   error: null,
   categories: [],
-  category: '63aed17dfe379dc26cf4e422'
-}
+  category: "63aed17dfe379dc26cf4e422",
+};
 
 export const fetchCategories = createAsyncThunk(
   "get/categories/fetch",
@@ -23,8 +23,9 @@ export const fetchCategories = createAsyncThunk(
     }
   }
 );
-export const setCategory = createAsyncThunk('setCategory', ({ id }, _) => {
-  return id
+
+export const setCategory = createAsyncThunk("setCategory", ({ id }, _) => {
+  return id;
 });
 
 const categoriesSlice = createSlice({
@@ -35,8 +36,8 @@ const categoriesSlice = createSlice({
     builder
       .addCase(setCategory.fulfilled, (state, action) => {
         state.category = action.payload;
-      }
-      )
+      })
+      
       .addCase(fetchCategories.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;

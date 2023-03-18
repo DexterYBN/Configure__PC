@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import configuresSlice from "./configuresSlice";
+
 const initialState = {
   loading: false,
   error: false,
@@ -32,6 +32,7 @@ export const authSignIn = createAsyncThunk(
     }
   }
 );
+
 export const authSignUp = createAsyncThunk(
   "auth/signUp",
   async ({ login, password }, thunkAPI) => {
@@ -52,6 +53,7 @@ export const authSignUp = createAsyncThunk(
     }
   }
 );
+
 export const fetchCart = createAsyncThunk(
   "fetch/cart",
   async ({ userId }, thunkAPI) => {
@@ -70,6 +72,7 @@ export const fetchCart = createAsyncThunk(
     }
   }
 );
+
 export const addAssemblytoCart = createAsyncThunk(
   "addAssemblytoCart",
   async ({ userId, assemblyId }, thunkAPI) => {
@@ -91,6 +94,7 @@ export const addAssemblytoCart = createAsyncThunk(
     }
   }
 );
+
 export const fetchUser = createAsyncThunk("fetch/user", async (_, thunkAPI) => {
   try {
     const res = await fetch(`/users`, {
@@ -108,6 +112,7 @@ export const fetchUser = createAsyncThunk("fetch/user", async (_, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.message);
   }
 });
+
 export const deleteAssemblyfromCart = createAsyncThunk(
   "cart/delete",
   async ({ userId, assemblyId }, thunkAPI) => {
@@ -129,6 +134,7 @@ export const deleteAssemblyfromCart = createAsyncThunk(
     }
   }
 );
+
 const usersSlice = createSlice({
   name: "users",
   initialState,
@@ -149,6 +155,7 @@ const usersSlice = createSlice({
       })
 
       // REGISTER
+
       .addCase(authSignUp.pending, (state) => {
         state.loading = true;
         state.error = false;
@@ -166,6 +173,7 @@ const usersSlice = createSlice({
       })
 
       //FETCH CART
+
       .addCase(fetchCart.pending, (state) => {
         state.loading = true;
         state.error = false;
@@ -179,7 +187,9 @@ const usersSlice = createSlice({
         state.error = false;
         state.cart = action.payload.cart;
       })
+
       //ADD TO CART
+
       .addCase(addAssemblytoCart.pending, (state) => {
         state.loading = true;
         state.error = false;
@@ -192,7 +202,9 @@ const usersSlice = createSlice({
         state.loading = false;
         state.error = false;
       })
+      
       //FETCH USERS
+
       .addCase(fetchUser.pending, (state) => {
         state.loading = true;
         state.error = false;
@@ -211,7 +223,9 @@ const usersSlice = createSlice({
           return state.users;
         });
       })
+
       //DELETE ASSEMBLY FROM CART
+      
       .addCase(deleteAssemblyfromCart.fulfilled, (state, action) => {
         state.error = null;
         state.loading = false;

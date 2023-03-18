@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { addAssemblytoCart } from "../../../features/usersSlice";
@@ -22,9 +21,12 @@ const Product = ({
   image,
 }) => {
   const dispatch = useDispatch();
-  const [inCart, setInCart] = useState(false);
+
+  const [inCart, setInCart] = React.useState(false);
+
   const cart = useSelector((state) => state.users.cart);
-  useEffect(() => {
+
+  React.useEffect(() => {
     if (cart) {
       cart.map((assembly) => {
         if (assembly === id) {
@@ -34,6 +36,7 @@ const Product = ({
     }
     
   }, [cart, id]);
+
   const handleAdd = () => {
     setInCart(true);
     dispatch(
@@ -52,7 +55,6 @@ const Product = ({
         alt=""
       />
       <Link to={`/assembly/${id}`}>
-        {" "}
         <div className={styles.title}>{name}</div>
       </Link>
       <div className={styles.price}>{cost} ₽</div>

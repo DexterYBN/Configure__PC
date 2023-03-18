@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./AboutUs.module.css";
+
 const History = () => {
   return (
     <div className={styles.aboutBlock}>
       <div className={styles.title}>
-        MATRIX – один из лидеров рынка по сборке персональных компьютеров в России
+        MATRIX – один из лидеров рынка по сборке персональных компьютеров в
+        России
       </div>
       <p className={styles.description}>
         Наша цель изменить жизнь людей, сделав простым доступ к огромному
-        количеству качественных и недорогих компьютеров, предоставляя лучший сервис.
+        количеству качественных и недорогих компьютеров, предоставляя лучший
+        сервис.
       </p>
       <h3 className={styles.titleHistory}>Наша история</h3>
       <div className={styles.historyBlock}>

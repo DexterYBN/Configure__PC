@@ -1,24 +1,30 @@
-import React, { useEffect } from "react";
-import styles from "./Header.module.css";
-import logo from "../../images/logo.png";
-import { NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAssembles } from "../../features/assemblesSlice";
+import styles from "./Header.module.css";
+import logo from "../../images/logo.png";
 
 const Header = () => {
   const dispatch = useDispatch();
+
   const token = useSelector((state) => state.users.token);
+
   const handleExit = () => {
-    localStorage.clear()
-    window.location.reload()
-  }
-  useEffect (() => {
+    localStorage.clear();
+    window.location.reload();
+  };
+
+  React.useEffect(() => {
     dispatch(fetchAssembles());
-  }, [dispatch])
+  }, [dispatch]);
+  
   return (
     <div className={styles.header}>
       <div className={styles.logoBlock}>
-        <img className={styles.logo} src={logo} alt="" />
+        <Link to="/">
+          <img className={styles.logo} src={logo} alt="logo" />
+        </Link>
         <div className={styles.logoText}>ATRIX</div>
       </div>
       <div className={styles.navigationBlock}>
@@ -67,17 +73,17 @@ const Header = () => {
           <NavLink to={"/cart"}>
             <div className={styles.cart}></div>
           </NavLink>
-            <button onClick={handleExit} className={styles.loginButton}>Выйти</button>
+          <button onClick={handleExit} className={styles.loginButton}>
+            Выйти
+          </button>
         </div>
       ) : (
         <div className={styles.loginBlock}>
           <NavLink to={"/login"}>
             <button className={styles.loginButton}>Войти</button>
           </NavLink>
-        
         </div>
       )}
-      
     </div>
   );
 };

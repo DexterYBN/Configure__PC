@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./Product.module.css";
+
 const Parts = ({
   processor,
   power,
@@ -12,6 +13,7 @@ const Parts = ({
   graphics,
 }) => {
   const accessory = useSelector((state) => state.accessories.acs);
+
   return (
     <div>
       <div>
@@ -20,7 +22,6 @@ const Parts = ({
           if (item._id === graphics) {
             return (
               <div key={item._id} className={styles.acsBlockN}>
-                {" "}
                 <img
                   className={styles.posterAcs}
                   src={`/assets/images/${item.category.image_white}`}
@@ -38,7 +39,6 @@ const Parts = ({
         if (item._id === processor) {
           return (
             <div key={item._id} className={styles.acsBlockN}>
-              {" "}
               <img
                 className={styles.posterAcs}
                 src={`/assets/images/${item.category.image_white}`}
@@ -55,7 +55,6 @@ const Parts = ({
         if (item._id === ram) {
           return (
             <div key={item._id} className={styles.acsBlockN}>
-              {" "}
               <img
                 className={styles.posterAcs}
                 src={`/assets/images/${item.category.image_white}`}
@@ -72,7 +71,6 @@ const Parts = ({
         if (item._id === motherboard) {
           return (
             <div key={item._id} className={styles.acsBlockN}>
-              {" "}
               <img
                 className={styles.posterAcs}
                 src={`/assets/images/${item.category.image_white}`}
@@ -90,7 +88,6 @@ const Parts = ({
             if (item._id === ssd) {
               return (
                 <div key={item._id} className={styles.acsBlockN}>
-                  {" "}
                   <img
                     className={styles.posterAcs}
                     src={`/assets/images/${item.category.image_white}`}
@@ -109,7 +106,6 @@ const Parts = ({
             if (item._id === hdd) {
               return (
                 <div key={item._id} className={styles.acsBlockN}>
-                  {" "}
                   <img
                     className={styles.posterAcs}
                     src={`/assets/images/${item.category.image_white}`}
@@ -127,7 +123,6 @@ const Parts = ({
         if (item._id === power) {
           return (
             <div key={item._id} className={styles.acsBlockN}>
-              {" "}
               <img
                 className={styles.posterAcs}
                 src={`/assets/images/${item.category.image_white}`}
@@ -144,7 +139,6 @@ const Parts = ({
         if (item._id === compCase) {
           return (
             <div key={item._id} className={styles.acsBlockN}>
-              {" "}
               <img
                 className={styles.posterAcs}
                 src={`/assets/images/${item.category.image_white}`}

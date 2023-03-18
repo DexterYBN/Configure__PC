@@ -4,13 +4,15 @@ import { addAssemblytoCart } from "../../../features/usersSlice";
 import styles from "./Total.module.css";
 
 const Total = () => {
-  const configure = useSelector((state) => state.configures.configureObj2)
-  const id = useSelector((state) => state.users.id)
-  console.log(configure)
-  const dispatch = useDispatch()
+  const configure = useSelector((state) => state.configures.configureObj2);
+  const id = useSelector((state) => state.users.id);
+
+  const dispatch = useDispatch();
+
   const handleAdd = () => {
-    dispatch(addAssemblytoCart({userId: id, assemblyId: configure._id}))
-  }
+    dispatch(addAssemblytoCart({ userId: id, assemblyId: configure._id }));
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.costBox}>
